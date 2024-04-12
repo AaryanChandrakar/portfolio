@@ -84,11 +84,12 @@ a{
 }
 
 .faded-text{
+    position: absolute;
     user-select: none;
     font-size: 7em;
     color: rgb(231, 231, 231);
     bottom: -16%;
-    left: 5%;
+    left: -5%;
     font-weight: bold;
     transition: all 3s;
 }
@@ -238,5 +239,51 @@ a{
     }
     100%{
         transform:  rotateY(360deg) translateY(0px);
+    }
+}
+
+.icon-circle{
+    z-index:9;
+    left:0;
+    bottom:0;
+    animation-name:shakeEffect;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} 
+
+ @keyframes shakeEffect {
+  
+    50%{
+        left:5%;
+        bottom:10%;
+    }
+}
+
+.icon-zigzag{
+    z-index:9;
+    top:1.5em;
+    left:-0.3em;
+    animation:zigzagAnimation 5s ease-in infinite;
+}
+
+@keyframes zigzagAnimation{
+    50%{
+        left:5%;
+        top:2%;
+    }
+}
+
+.icon-plus{
+    z-index:9;
+    top:-0.8rem;
+    left: 50%;
+    animation:shakeEffectPlus 5s ease-in infinite;
+}
+
+@keyframes shakeEffectPlus {
+    50%{
+        top:3%;
+        left:48%
     }
 }
